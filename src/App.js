@@ -26,13 +26,9 @@ const theme = createMuiTheme({
       main: '#6bf178ff',
     }
   }, typography: {
-    h1: {
-      fontFamily: 'Plaster',
-      color: 'white'
-    },
     h3:{
-      fontFamily: 'Plaster'
-
+      fontFamily:'Saira Stencil One',
+    
     }
   }
 });
@@ -57,16 +53,17 @@ function App() {
         container
         direction="column"
         className={classes.Banner}
+        
       >
-        <Grid item xs={12}>
+        <Grid item >
           <Topmenu />
         </Grid>
-        <Grid item container  >
-          <Grid item sm={4} md={6} />
-          <Grid item  sm={4} md={4} >
+        <Grid item container >
+          <Grid item xs={4} md={6} />
+          <Grid item  xs={8} md={4} >
              <Landing/>
           </Grid>
-          <Grid item sm={2} md={2} />
+          <Grid item xs={false} md={2} />
         </Grid>
       </Grid>
     </ThemeProvider>

@@ -9,7 +9,7 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import Linkedin from '@material-ui/icons/LinkedIn'
-import CodeIcon from '@material-ui/icons/Code';
+import logo from '../img/ligh-logo.png'
 const useStyles = makeStyles((theme) => ({
     root: {
        
@@ -48,7 +48,7 @@ export default function ButtonAppBar() {
         <AppBar position="sticky" color="transparent" xs={12} className={classes.shadow} >
             <Toolbar>
                 <IconButton edge='start' color='inherit' className={classes.menuButton}>
-                    <Avatar variant="square" className={classes.root} src ='/ligh-logo.png'/>
+                    <Avatar variant="square" className={classes.root} src ={logo}/>
                 </IconButton>
                 <div className={classes.grow}/>
                 <IconButton  color='inherit'>
