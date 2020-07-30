@@ -35,7 +35,7 @@ const theme = createMuiTheme({
 
 const useStyles = makeStyles({
   Banner : {
-    background:`url(${process.env.PUBLIC_URL}/Cover.jpg) no-repeat center center fixed`,
+    background:`url(${process.env.PUBLIC_URL}/Cover1.jpg) no-repeat center center fixed`,
     backgroundRepeat:'no-repeat',
     backgroundSize :'contain',
     backgroundSize:"cover",
