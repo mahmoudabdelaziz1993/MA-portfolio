@@ -12,24 +12,24 @@ import Linkedin from '@material-ui/icons/LinkedIn'
 import logo from '../img/ligh-logo.png'
 const useStyles = makeStyles((theme) => ({
     root: {
-       
+
         width: theme.spacing(7),
         height: theme.spacing(7),
     },
     menuButton: {
         marginRight: theme.spacing(0),
-    },Brand :{
+    }, Brand: {
         flexGrow: 1,
-        fontFamily:'Audiowide',
-        
-        
-    },grow:{
-        flexGrow:1
-    },shadow:{
-        boxShadow:'none',
+        fontFamily: 'Audiowide',
+
+
+    }, grow: {
+        flexGrow: 1
+    }, shadow: {
+        boxShadow: 'none',
     }
 
-   
+
 }));
 
 export default function ButtonAppBar() {
@@ -48,19 +48,16 @@ export default function ButtonAppBar() {
         <AppBar position="sticky" color="transparent" xs={12} className={classes.shadow} >
             <Toolbar>
                 <IconButton edge='start' color='inherit' className={classes.menuButton}>
-                    <Avatar variant="square" className={classes.root} src ={logo}/>
+                    <Avatar variant="square" className={classes.root} src={logo} />
                 </IconButton>
-                <div className={classes.grow}/>
-                <IconButton  color='inherit'>
+                <div className={classes.grow} />
+                <IconButton color='inherit' href='https://www.linkedin.com/in/mahmoud-abdelaziz-salama/'>
                     <Linkedin style={{ fontSize: 30 }} />
                 </IconButton>
-                <IconButton  color='inherit'>
-                    <FacebookIcon style={{ fontSize: 30 }}/>
+                <IconButton color='inherit' href='https://github.com/mahmoudabdelaziz1993/'>
+                    <GitHubIcon style={{ fontSize: 30 }} />
                 </IconButton>
-                <IconButton size='small' >
-                    <GitHubIcon />
-                </IconButton>
-                <IconButton aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick} >
+                <IconButton color='inherit' aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick} >
                     <ExploreIcon style={{ fontSize: 30 }} />
                 </IconButton>
                 <Menu
