@@ -2,10 +2,9 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import { Typography, IconButton, Avatar } from '@material-ui/core';
+import {  IconButton, Avatar } from '@material-ui/core';
 import ExploreIcon from '@material-ui/icons/Explore';
 import GitHubIcon from '@material-ui/icons/GitHub';
-import FacebookIcon from '@material-ui/icons/Facebook';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import Linkedin from '@material-ui/icons/LinkedIn'
@@ -13,8 +12,8 @@ import logo from '../img/ligh-logo.png'
 const useStyles = makeStyles((theme) => ({
     root: {
 
-        width: theme.spacing(7),
-        height: theme.spacing(7),
+        width: theme.spacing(6),
+        height: theme.spacing(6),
     },
     menuButton: {
         marginRight: theme.spacing(0),

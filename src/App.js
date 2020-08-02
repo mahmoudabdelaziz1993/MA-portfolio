@@ -37,10 +37,14 @@ const useStyles = makeStyles({
   Banner : {
     background:`url(${process.env.PUBLIC_URL}/Cover1.jpg) no-repeat center center fixed`,
     backgroundRepeat:'no-repeat',
-    backgroundSize :'contain',
     backgroundSize:"cover",
     minHeight:'100vh'
 
+  },about:{
+    background:`url(${process.env.PUBLIC_URL}/about.jpg) no-repeat center center fixed`,
+    backgroundRepeat:'no-repeat',
+    backgroundSize:"cover",
+    minHeight:'100vh'
   }
 })
 function App() {
@@ -59,12 +63,15 @@ function App() {
           <Topmenu />
         </Grid>
         <Grid item container >
-          <Grid item xs={4} md={6} />
-          <Grid item  xs={8} md={4} >
+          <Grid item xs={5} md={6} />
+          <Grid item  xs={7} md={4} >
              <Landing/>
           </Grid>
           <Grid item xs={false} md={2} />
         </Grid>
+        {/* <Grid item container className={classes.about}>
+
+        </Grid> */}
       </Grid>
     </ThemeProvider>
 
