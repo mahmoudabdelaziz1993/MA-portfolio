@@ -1,50 +1,43 @@
 import React from 'react';
 import './App.css';
-import { createMuiTheme,makeStyles } from '@material-ui/core/styles'
+import { createMuiTheme, makeStyles } from '@material-ui/core/styles'
 import { ThemeProvider } from '@material-ui/styles'
 import Topmenu from './components/Topmenu';
 import { Grid } from '@material-ui/core';
 import Landing from './components/Landing'
+import About from './components/About';
 
 
 const theme = createMuiTheme({
   palette: {
     primary: {
       // Purple and green play nicely together.
-      main: "#ffe74cff",
+      main: "#eeeeee",
     },
     secondary: {
       // This is green.A700 as hex.
-      main: '#ff5964ff',
-    },
-    info: {
-      // This is green.A700 as hex.
-      main: '#ff5964ff',
-    },
-    success: {
-      // This is green.A700 as hex.
-      main: '#6bf178ff',
+      main: '#d72323',
     }
   }, typography: {
-    h3:{
-      fontFamily:'Saira Stencil One',
-    
+    h3: {
+      fontFamily: 'Saira Stencil One',
+      fontSize: "6vw",
+      lineBreak: 'auto'
+
+    },button:{
+      fontSize:'2vw'
     }
   }
 });
 
 const useStyles = makeStyles({
-  Banner : {
-    background:`url(${process.env.PUBLIC_URL}/Cover1.jpg) no-repeat center center fixed`,
-    backgroundRepeat:'no-repeat',
-    backgroundSize:"cover",
-    minHeight:'100vh'
+  Banner: {
+    background: `url(${process.env.PUBLIC_URL}/Cover1.jpg) no-repeat center center fixed`,
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: "cover",
+    minHeight: '100vh',
+    margin: 'none'
 
-  },about:{
-    background:`url(${process.env.PUBLIC_URL}/about.jpg) no-repeat center center fixed`,
-    backgroundRepeat:'no-repeat',
-    backgroundSize:"cover",
-    minHeight:'100vh'
   }
 })
 function App() {
@@ -56,23 +49,20 @@ function App() {
       <Grid
         container
         direction="column"
-        className={classes.Banner}
-        
       >
-        <Grid item >
-          <Topmenu />
-        </Grid>
-        <Grid item container >
+        <Topmenu />
+        <Grid item container className={classes.Banner} >
           <Grid item xs={5} md={6} />
-          <Grid item  xs={7} md={4} >
-             <Landing/>
+          <Grid item xs={7} md={4} >
+            <Landing />
           </Grid>
           <Grid item xs={false} md={2} />
         </Grid>
-        {/* <Grid item container className={classes.about}>
-
-        </Grid> */}
+        <Grid item container >
+          <About />
+        </Grid>
       </Grid>
+
     </ThemeProvider>
 
   );
