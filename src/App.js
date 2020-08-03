@@ -49,9 +49,10 @@ function App() {
       <Grid
         container
         direction="column"
+        className={classes.Banner}
       >
         <Topmenu />
-        <Grid item container className={classes.Banner} >
+        <Grid item container >
           <Grid item xs={5} md={6} />
           <Grid item xs={7} md={4} >
             <Landing />
